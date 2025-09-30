@@ -4,13 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Week 8 Plus Final Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Week 7 Weather App</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="container">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form"
+          />
+          <input type="submit" value="search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="app-data">
+          <div>
+            <h1 class="city-name" id="city"></h1>
+            <p>
+              <span id="time"></span> <span class="divider"> | </span>
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>
+              <span class="divider"> | </span>
+              Wind: <strong id="wind"></strong>
+            </p>
+          </div>
+          <div class="temp-container">
+            <div class="temp-icon"></div>
+            <div class="temp"></div>
+            <div class="temp-unit"></div>
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="weather-forecast-day">
+            <div class="forecast-date">Tue</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="forecast-date">Wed</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="forecast-date">Thurs</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="forecast-date">Fri</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="forecast-date">Sat</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/beckslange" target="_blank">Rebecca Lange</a
+        >, open sourced on
+        <a
+          href="https://github.com/beckslange/vanilla-weather-search-homework"
+          target="_blank"
+          >GitHub</a
+        >, and hosted on
+        <a
+          href="https://app.netlify.com/projects/weeksevenweatherapphomework/overview"
+          target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/style.js"></script>
   </body>
-  <script src="src/style.js"></script>
 </html>
+
 <!--How to set it all up
 1. Design
 2. HTML

@@ -1,3 +1,132 @@
-h1 {
-  text-align: right;
+body {
+  background: #ececec; /* first-color */
+  font-family: "Roboto Condensed", sans-serif;
+  color: #142d4c; /* fourth-color */
+}
+
+header {
+  border-bottom: 1px solid #9fd3c7; /* second-color */
+  padding: 0 0 30px 0;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(20, 45, 76, 0.15); /* fourth-color shadow */
+}
+
+.search-form {
+  background: #ececec; /* first-color */
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  padding: 15px 20px;
+  color: #142d4c; /* fourth-color text */
+}
+
+.search-button {
+  background: #385170; /* third-color */
+  color: #ececec; /* first-color text */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 15px 20px;
+  margin-left: 5px;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #142d4c; /* fourth-color hover */
+}
+
+main {
+  padding: 30px 0;
+}
+
+.app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-name {
+  font-size: 38px;
+  margin: 0;
+  line-height: 48px;
+  color: #142d4c; /* fourth-color */
+}
+
+.app-data strong {
+  color: #9fd3c7; /* second-color for highlights */
+}
+
+.divider {
+  color: #385170; /* third-color divider */
+}
+
+.temp-container {
+  display: flex;
+  align-items: center;
+}
+
+.temp-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.temp {
+  font-size: 88px;
+  font-weight: bold;
+  line-height: 88px;
+  color: #385170; /* third-color */
+}
+
+.temp-unit {
+  margin-top: 6px;
+  font-size: 28px;
+  color: #142d4c; /* fourth-color */
+}
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.forecast-date {
+  text-align: center;
+  color: rgba(20, 45, 76, 0.2);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.forecast-icon {
+  font-size: 48px;
+  text-align: center;
+}
+.forecast-temps {
+  display: flex;
+  color: #9fd3c7;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.forecast-high-low {
+  padding: 0 10px;
+}
+
+footer {
+  border-top: 1px solid #9fd3c7; /* second-color */
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: #385170; /* third-color */
+}
+a {
+  color: #385170; /* third-color links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #142d4c; /* fourth-color on hover */
 }
