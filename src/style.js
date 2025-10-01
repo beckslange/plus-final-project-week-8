@@ -42,6 +42,7 @@ function refreshWeather(response) {
   tempElement.innerHTML = Math.round(response.data.temperature.current);
 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="${response.data.condition.description}" class="weather-icon" />`;
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -53,6 +54,11 @@ function handleSearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector(".search-form");
   searchCity(searchInput.value);
+}
+function getForecast(city) {
+  let apiKey = "tfo33b89af42954f2d60430a801e1b3c";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiURL).then(displayForecast);
 }
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
@@ -77,4 +83,4 @@ let form = document.querySelector("form");
 form.addEventListener("submit", handleSearch);
 
 searchCity("New York");
-displayForecast();
+getForecast("New York");
