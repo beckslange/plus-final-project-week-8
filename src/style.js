@@ -54,6 +54,17 @@ function handleSearch(event) {
   let searchInput = document.querySelector(".search-form");
   searchCity(searchInput.value);
 }
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = `<div class="weather-forecast-day">
+            <div class="forecast-date">Tue</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temps">
+              <div class="forecast-high-low"><strong>15°</strong></div>
+              <div class="forecast-high-low">9°</div>
+            </div>
+          </div>`;
+}
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSearch);
