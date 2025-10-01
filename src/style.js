@@ -55,18 +55,26 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
-  forecast.innerHTML = `<div class="weather-forecast-day">
-            <div class="forecast-date">Tue</div>
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+            <div class="forecast-date">${day}</div> 
             <div class="forecast-icon">☀️</div>
             <div class="forecast-temps">
               <div class="forecast-high-low"><strong>15°</strong></div>
               <div class="forecast-high-low">9°</div>
             </div>
           </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSearch);
 
 searchCity("New York");
+displayForecast();
